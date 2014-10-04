@@ -1,0 +1,113 @@
+<%= form_for(@attendee) do |f| %>
+  <% if @attendee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@attendee.errors.count, "error") %> prohibited this attendee from being saved:</h2>
+
+      <ul>
+      <% @attendee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :allergies %><br>
+    <%= f.text_field :allergies %>
+  </div>
+  <div class="field">
+    <%= f.label :church %><br>
+    <%= f.text_field :church %>
+  </div>
+  <div class="field">
+    <%= f.label :diet_requirements %><br>
+    <%= f.text_field :diet_requirements %>
+  </div>
+  <div class="field">
+    <%= f.label :dob %><br>
+    <%= f.date_select :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :e_email %><br>
+    <%= f.text_field :e_email %>
+  </div>
+  <div class="field">
+    <%= f.label :e_h_phone %><br>
+    <%= f.number_field :e_h_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :e_m_phone %><br>
+    <%= f.number_field :e_m_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :e_name %><br>
+    <%= f.text_field :e_name %>
+  </div>
+  <div class="field">
+    <%= f.label :e_relationship %><br>
+    <%= f.text_field :e_relationship %>
+  </div>
+  <div class="field">
+    <%= f.label :e_w_phone %><br>
+    <%= f.number_field :e_w_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :f_name %><br>
+    <%= f.text_field :f_name %>
+  </div>
+  <div class="field">
+    <%= f.label :g_email %><br>
+    <%= f.text_field :g_email %>
+  </div>
+  <div class="field">
+    <%= f.label :g_h_phone %><br>
+    <%= f.number_field :g_h_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :g_m_phone %><br>
+    <%= f.number_field :g_m_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :g_name %><br>
+    <%= f.text_field :g_name %>
+  </div>
+  <div class="field">
+    <%= f.label :g_w_phone %><br>
+    <%= f.number_field :g_w_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :l_name %><br>
+    <%= f.text_field :l_name %>
+  </div>
+  <div class="field">
+    <%= f.label :medication %><br>
+    <%= f.text_field :medication %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :panadol %><br>
+    <%= f.check_box :panadol %>
+  </div>
+  <div class="field">
+    <%= f.label :role %><br>
+    <%= f.text_field :role %>
+  </div>
+  <div class="field">
+    <%= f.label :school %><br>
+    <%= f.text_field :school %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

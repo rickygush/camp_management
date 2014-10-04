@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Attendee:</strong>
+  <%= @enrollment.attendee_id %>
+</p>
+
+<p>
+  <strong>Camp:</strong>
+  <%= @enrollment.camp_id %>
+</p>
+
+<p>
+  <strong>Cabin:</strong>
+  <%= @enrollment.cabin_id %>
+</p>
+
+<p>
+  <strong>Payment method:</strong>
+  <%= @enrollment.payment_method %>
+</p>
+
+<p>
+  <strong>Charge:</strong>
+  <%= @enrollment.charge %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @enrollment.paid %>
+</p>
+
+<p>
+  <strong>Pick up:</strong>
+  <%= @enrollment.pick_up %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @enrollment.notes %>
+</p>
+
+<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<%= link_to 'Back', enrollments_path %>

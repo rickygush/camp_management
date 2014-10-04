@@ -1,0 +1,73 @@
+<h1>Listing attendees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Allergies</th>
+      <th>Church</th>
+      <th>Diet requirements</th>
+      <th>Dob</th>
+      <th>E email</th>
+      <th>E h phone</th>
+      <th>E m phone</th>
+      <th>E name</th>
+      <th>E relationship</th>
+      <th>E w phone</th>
+      <th>F name</th>
+      <th>G email</th>
+      <th>G h phone</th>
+      <th>G m phone</th>
+      <th>G name</th>
+      <th>G w phone</th>
+      <th>Gender</th>
+      <th>L name</th>
+      <th>Medication</th>
+      <th>Notes</th>
+      <th>Panadol</th>
+      <th>Role</th>
+      <th>School</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendees.each do |attendee| %>
+      <tr>
+        <td><%= attendee.address %></td>
+        <td><%= attendee.allergies %></td>
+        <td><%= attendee.church %></td>
+        <td><%= attendee.diet_requirements %></td>
+        <td><%= attendee.dob %></td>
+        <td><%= attendee.e_email %></td>
+        <td><%= attendee.e_h_phone %></td>
+        <td><%= attendee.e_m_phone %></td>
+        <td><%= attendee.e_name %></td>
+        <td><%= attendee.e_relationship %></td>
+        <td><%= attendee.e_w_phone %></td>
+        <td><%= attendee.f_name %></td>
+        <td><%= attendee.g_email %></td>
+        <td><%= attendee.g_h_phone %></td>
+        <td><%= attendee.g_m_phone %></td>
+        <td><%= attendee.g_name %></td>
+        <td><%= attendee.g_w_phone %></td>
+        <td><%= attendee.gender %></td>
+        <td><%= attendee.l_name %></td>
+        <td><%= attendee.medication %></td>
+        <td><%= attendee.notes %></td>
+        <td><%= attendee.panadol %></td>
+        <td><%= attendee.role %></td>
+        <td><%= attendee.school %></td>
+        <td><%= link_to 'Show', attendee %></td>
+        <td><%= link_to 'Edit', edit_attendee_path(attendee) %></td>
+        <td><%= link_to 'Destroy', attendee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attendee', new_attendee_path %>

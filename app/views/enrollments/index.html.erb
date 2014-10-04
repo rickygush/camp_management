@@ -1,0 +1,41 @@
+<h1>Listing enrollments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attendee</th>
+      <th>Camp</th>
+      <th>Cabin</th>
+      <th>Payment method</th>
+      <th>Charge</th>
+      <th>Paid</th>
+      <th>Pick up</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enrollments.each do |enrollment| %>
+      <tr>
+        <td><%= enrollment.attendee_id %></td>
+        <td><%= enrollment.camp_id %></td>
+        <td><%= enrollment.cabin_id %></td>
+        <td><%= enrollment.payment_method %></td>
+        <td><%= enrollment.charge %></td>
+        <td><%= enrollment.paid %></td>
+        <td><%= enrollment.pick_up %></td>
+        <td><%= enrollment.notes %></td>
+        <td><%= link_to 'Show', enrollment %></td>
+        <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
+        <td><%= link_to 'Destroy', enrollment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enrollment', new_enrollment_path %>

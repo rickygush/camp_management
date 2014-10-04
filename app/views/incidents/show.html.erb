@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Attendee:</strong>
+  <%= @incident.attendee_id %>
+</p>
+
+<p>
+  <strong>Camp:</strong>
+  <%= @incident.camp_id %>
+</p>
+
+<p>
+  <strong>Incident:</strong>
+  <%= @incident.incident %>
+</p>
+
+<%= link_to 'Edit', edit_incident_path(@incident) %> |
+<%= link_to 'Back', incidents_path %>

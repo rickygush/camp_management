@@ -1,0 +1,49 @@
+<%= form_for(@enrollment) do |f| %>
+  <% if @enrollment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@enrollment.errors.count, "error") %> prohibited this enrollment from being saved:</h2>
+
+      <ul>
+      <% @enrollment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :attendee_id %><br>
+    <%= f.number_field :attendee_id %>
+  </div>
+  <div class="field">
+    <%= f.label :camp_id %><br>
+    <%= f.number_field :camp_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cabin_id %><br>
+    <%= f.number_field :cabin_id %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_method %><br>
+    <%= f.text_field :payment_method %>
+  </div>
+  <div class="field">
+    <%= f.label :charge %><br>
+    <%= f.number_field :charge %>
+  </div>
+  <div class="field">
+    <%= f.label :paid %><br>
+    <%= f.number_field :paid %>
+  </div>
+  <div class="field">
+    <%= f.label :pick_up %><br>
+    <%= f.text_field :pick_up %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
